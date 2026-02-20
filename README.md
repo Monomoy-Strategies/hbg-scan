@@ -4,6 +4,8 @@
 
 **Zero dependencies. Node.js only. Free.**
 
+🔗 <https://github.com/Monomoy-Strategies/hbg-scan> · [heartbeatguard.com](https://heartbeatguard.com)
+
 ---
 
 ## What It Does
@@ -42,12 +44,14 @@ node index.js --output ./scan-results
 node index.js ~/.openclaw/skills/ ./my-custom-skills/
 ```
 
-**Or install globally:**
+**Or clone and run:**
 ```bash
-npm install -g hbg-scan
-hbg-scan
-hbg-scan ~/.openclaw/skills/
+git clone https://github.com/Monomoy-Strategies/hbg-scan.git
+cd hbg-scan
+node index.js
 ```
+
+*(npm package coming soon)*
 
 ---
 
