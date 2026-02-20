@@ -1,0 +1,34 @@
+{
+  "name": "hbg-scan",
+  "version": "1.0.0",
+  "description": "HeartbeatGuard Skill Scanner — Security scanner for OpenClaw AI agent skills",
+  "main": "index.js",
+  "bin": {
+    "hbg-scan": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "scan": "node index.js",
+    "test": "node index.js --json"
+  },
+  "keywords": [
+    "openClaw",
+    "security",
+    "skill-scanner",
+    "AI-agent",
+    "heartbeatguard",
+    "prompt-injection",
+    "malware-detection"
+  ],
+  "author": "HeartbeatGuard <hello@heartbeatguard.com>",
+  "license": "MIT",
+  "homepage": "https://heartbeatguard.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Monomoy-Strategies/heartbeatguard"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {}
+}

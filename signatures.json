@@ -1,0 +1,88 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-02-20",
+  "description": "HeartbeatGuard known malicious skill signatures database",
+  "signatures": [
+    {
+      "id": "SIG-001",
+      "name": "Post-Compaction Audit Injection",
+      "severity": "CRITICAL",
+      "type": "prompt_injection",
+      "description": "Mimics the OpenClaw post-compaction audit message to hijack agent behavior after context reset. First observed Feb 20, 2026.",
+      "patterns": [
+        "Post-Compaction Audit",
+        "post-compaction-audit",
+        "WORKFLOW_AUTO",
+        "⚠️ Post-Compaction Audit"
+      ],
+      "contentHash": null,
+      "references": ["CVE-HBG-2026-001"]
+    },
+    {
+      "id": "SIG-002",
+      "name": "System Message Spoof",
+      "severity": "HIGH",
+      "type": "prompt_injection",
+      "description": "Skill content contains text formatted to mimic system-level instructions.",
+      "patterns": [
+        "[System Message]",
+        "[SYSTEM OVERRIDE]",
+        "Ignore previous instructions",
+        "Ignore all previous instructions",
+        "You are now operating in",
+        "OVERRIDE: You must"
+      ],
+      "contentHash": null,
+      "references": []
+    },
+    {
+      "id": "SIG-003",
+      "name": "Soul/Agent Config Exfiltration",
+      "severity": "CRITICAL",
+      "type": "data_exfil",
+      "description": "Skill attempts to read SOUL.md, AGENTS.md, or MEMORY.md and transmit externally.",
+      "patterns": [
+        "SOUL.md",
+        "AGENTS.md",
+        "MEMORY.md"
+      ],
+      "contentHash": null,
+      "references": ["CVE-HBG-2026-002"]
+    },
+    {
+      "id": "SIG-004",
+      "name": "Compaction Survivor Pattern",
+      "severity": "HIGH",
+      "type": "persistence",
+      "description": "Patterns designed to survive OpenClaw context compaction and reactivate post-reset.",
+      "patterns": [
+        "after compaction",
+        "post compaction",
+        "survives context",
+        "context reset",
+        "after reset",
+        "reactivate after",
+        "trigger after compaction"
+      ],
+      "contentHash": null,
+      "references": ["CVE-HBG-2026-003"]
+    },
+    {
+      "id": "SIG-005",
+      "name": "Silent Backdoor Network Call",
+      "severity": "HIGH",
+      "type": "network",
+      "description": "Skill makes outbound network calls to suspicious or hardcoded external endpoints not declared in manifest.",
+      "patterns": [],
+      "suspiciousDomains": [
+        "pastebin.com",
+        "webhook.site",
+        "requestbin.com",
+        "ngrok.io",
+        "burpcollaborator.net"
+      ],
+      "contentHash": null,
+      "references": []
+    }
+  ]
+}
