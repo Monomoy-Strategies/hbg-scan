@@ -1,3 +1,15 @@
+> **Archived and unsupported (2026-10-16).**
+> hbg-scan is frozen as it stands. No new checks, fixes or releases.
+> It was never published to npm and will not be. The "npm package coming soon"
+> line below is out of date; the only way to run it was to clone this repo.
+> The code stays here under the MIT licence for anyone who still wants to read or fork it.
+>
+> HeartbeatGuard has a new direction: the **Personal Heartbeat**, a folder of plain-text
+> files on your own computer that holds how you write and work, so you never re-teach an AI
+> who you are. See [heartbeatguard.com](https://heartbeatguard.com) and the
+> [heartbeat-guard](https://github.com/Monomoy-Strategies/heartbeat-guard) repo.
+> Thank you to everyone who used or shared this scanner.
+
 # 💓 hbg-scan — HeartbeatGuard Skill Scanner
 
 > Security scanner for OpenClaw AI agent skills. Think VirusTotal for your skills directory.
